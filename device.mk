@@ -24,20 +24,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     Camera2
 
-#PixelSounds
-ifeq ($(DERP_BUILD_ZIP_TYPE), VANILLA)
-PRODUCT_PACKAGES += \
-    PixelSounds
-endif
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
-
-ifeq ($(DERP_BUILD_ZIP_TYPE), VANILLA)
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-nogapps
-endif
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay

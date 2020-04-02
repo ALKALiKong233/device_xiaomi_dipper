@@ -6,18 +6,9 @@
 
 $(call inherit-product, device/xiaomi/dipper/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common Legion stuff.
+$(call inherit-product, vendor/legion/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-DERP_BUILD_ZIP_TYPE := GAPPS
-DERP_BUILDTYPE := Official
-
-ifeq ($(DERP_BUILD_ZIP_TYPE), GAPPS)
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-endif
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := derp_dipper
